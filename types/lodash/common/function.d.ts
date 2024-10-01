@@ -1330,7 +1330,7 @@ declare module "../index" {
          * @param func The function to spread arguments over.
          * @return Returns the new function.
          */
-        spread<TResult>(func: (...args: any[]) => TResult, start?: number): (...args: any[]) => TResult;
+        spread<T extends any[], TResult>(func: (...args: T) => TResult, start?: number): (args: T) => TResult;
     }
     interface Function<T extends (...args: any) => any> {
         /**
